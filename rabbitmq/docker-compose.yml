@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    # On utilise la version avec l'interface de gestion (management) intégrée
+    image: rabbitmq:4-management
+    container_name: rabbitmq_dev
+    restart: always
+    
+    # Configuration des identifiants par défaut
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    
+    # Ouverture des ports réseau
+    ports:
+      - "5672:5672"     # Port principal pour l'application C# (protocole AMQP)
+      - "15672:15672"   # Port pour l'interface de gestion Web
+    
+    # Persistance des données (Volume)
+    # Évite de perdre vos files, configurations et messages au redémarrage du conteneur
+    volumes:
+      - ./data:/var/lib/rabbitmq
+      - ./config/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
