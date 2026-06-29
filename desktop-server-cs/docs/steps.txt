@@ -1,0 +1,21 @@
+- Install RabbitMq : 
+    - NuGet Package Manager UI
+    - Search for RabbitMQ.Client
+    - Or : Package Manager Console => Install-Package RabbitMQ.Client
+    - Or : .NET CLI (in the terminal) => dotnet add package RabbitMQ.Client
+
+- Connection : 
+    var factory = new ConnectionFactory() 
+    {   HostName = "localhost",
+        UserName = "admin",
+        Password = "admin"
+    };
+- Application configuration file : 
+    - appsettings.json
+    - Package Manager Console => Install-Package Microsoft.Extensions.Configuration
+    - Package Manager Console => Install-Package Microsoft.Extensions.Configuration.Json
+    - Metadata : Install-Package TagLibSharp
+
+- Backend : Asp.Net Core : 
+    - package :  Npgsql.EntityFrameworkCore.PostgreSQL, Microsoft.EntityFrameworkCore.Design
+    - Postgres
