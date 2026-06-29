@@ -1,0 +1,49 @@
+[2026-06-29 04:43:18] [SYSTEM] Logger initialized. Log file: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\logs\playlist-log-2026-06-29_04-43-18.log
+[2026-06-29 04:43:18] [SYSTEM] Starting: desktop-server-app
+[2026-06-29 04:43:18] [SYSTEM] Pipeline: Task1 → [scan-queue] → Task2 → [extract-queue] → Task3 → [upload-queue] → Task4
+[2026-06-29 04:43:18] [Task1] Started — watching: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3
+[2026-06-29 04:43:18] [Task1] Scan interval: 6 second(s)
+[2026-06-29 04:43:18] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:43:18] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:43:18] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:43:18] [Task2] Started — consuming 'playlist-scan-queue'.
+[2026-06-29 04:43:18] [Task3] Started — consuming 'playlist-extract-queue'.
+[2026-06-29 04:43:18] [Task4] Started — consuming 'playlist-upload-queue'.
+[2026-06-29 04:43:18] [Task2] Waiting for scan batches. Press Ctrl+C to stop.
+[2026-06-29 04:43:18] [Task3] Waiting for metadata batches. Press Ctrl+C to stop.
+[2026-06-29 04:43:18] [Task4] Waiting for upload confirmations. Press Ctrl+C to stop.
+[2026-06-29 04:43:24] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:43:24] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:43:24] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:43:30] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:43:30] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:43:30] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:43:36] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:43:36] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:43:36] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:43:42] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:43:42] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:43:42] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:43:48] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:43:48] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:43:48] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:43:54] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:43:54] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:43:54] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:44:00] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:44:00] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:44:00] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:44:06] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:44:06] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:44:06] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:44:12] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:44:12] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:44:12] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:44:18] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:44:18] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:44:18] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:44:24] [Task1] Found 1 file(s) total, 0 .mp3 file(s).
+[2026-06-29 04:44:24] [Task1] No .mp3 files — nothing to publish.
+[2026-06-29 04:44:24] [Task1] Next scan in 6 second(s)…
+[2026-06-29 04:44:26] [SYSTEM] Shutdown requested (Ctrl+C).
+[2026-06-29 04:44:26] [SYSTEM] Shutdown requested (Ctrl+C).

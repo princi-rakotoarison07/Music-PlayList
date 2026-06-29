@@ -1,0 +1,151 @@
+<section class="max-w-[1200px] mx-auto px-6 pb-16">
+  <!-- Page Header -->
+  <div class="pt-10 pb-6 text-center">
+    <h1 class="text-[28px] font-bold text-text-primary tracking-tight mb-1.5">Toutes les Chansons</h1>
+    <p class="text-sm text-text-muted">Parcourez l'intégralité de votre bibliothèque musicale</p>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="flex flex-wrap gap-2.5 items-center mb-6">
+    <div class="flex-1 min-w-[180px] relative">
+      <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted pointer-events-none"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text"
+        [(ngModel)]="searchTitle"
+        placeholder="Rechercher par titre…"
+        (keyup.enter)="onSearch()"
+        id="search-title"
+        class="w-full pl-10 pr-3.5 py-2.5 border border-peach-light rounded-lg text-[13px]
+               bg-alabaster text-text-primary outline-none
+               focus:border-sage focus:ring-3 focus:ring-sage/15 transition-all duration-200
+               placeholder:text-text-muted"
+      />
+    </div>
+    <div class="flex-1 min-w-[180px] relative">
+      <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted pointer-events-none"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <input type="text"
+        [(ngModel)]="searchArtist"
+        placeholder="Rechercher par artiste…"
+        (keyup.enter)="onSearch()"
+        id="search-artist"
+        class="w-full pl-10 pr-3.5 py-2.5 border border-peach-light rounded-lg text-[13px]
+               bg-alabaster text-text-primary outline-none
+               focus:border-sage focus:ring-3 focus:ring-sage/15 transition-all duration-200
+               placeholder:text-text-muted"
+      />
+    </div>
+    <button (click)="onSearch()" id="btn-search"
+            class="px-5 py-2.5 bg-sage text-white text-[13px] font-semibold rounded-lg
+                   hover:bg-sage-dark transition-colors duration-200 cursor-pointer">
+      Rechercher
+    </button>
+    @if (searchTitle || searchArtist) {
+      <button (click)="onClearSearch()" id="btn-clear"
+              class="px-4 py-2.5 bg-transparent text-text-muted text-[13px] font-medium
+                     border border-peach-light rounded-lg hover:border-peach hover:text-text-secondary
+                     transition-all duration-200 cursor-pointer">
+        Effacer
+      </button>
+    }
+  </div>
+
+  <!-- Loading -->
+  @if (loading()) {
+    <div class="text-center py-16 text-text-muted">
+      <div class="w-9 h-9 border-3 border-peach-light border-t-sage rounded-full mx-auto mb-4 animate-spin"></div>
+      <p>Chargement…</p>
+    </div>
+  }
+
+  <!-- Empty -->
+  @if (!loading() && tracks().length === 0) {
+    <div class="text-center py-16">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-peach-light flex items-center justify-center">
+        <svg class="w-8 h-8 text-peach" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-text-primary mb-2">Aucun résultat</h2>
+      <p class="text-text-muted text-sm">Aucune chanson ne correspond à votre recherche.</p>
+    </div>
+  }
+
+  <!-- Table -->
+  @if (!loading() && tracks().length > 0) {
+    <div class="overflow-x-auto rounded-xl border border-peach-light bg-alabaster">
+      <table class="w-full border-collapse" id="tracks-table">
+        <thead class="border-b border-peach-light">
+          <tr>
+            <th class="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wide text-text-muted w-10">#</th>
+            <th class="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wide text-text-muted">Titre</th>
+            <th class="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wide text-text-muted">Artiste</th>
+            <th class="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wide text-text-muted hidden md:table-cell">Album</th>
+            <th class="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wide text-text-muted hidden md:table-cell">Genre</th>
+            <th class="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wide text-text-muted whitespace-nowrap">Durée</th>
+            <th class="px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wide text-text-muted hidden md:table-cell">Taille</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (track of tracks(); track track.id; let i = $index) {
+            <tr class="border-b border-peach/20 last:border-b-0 hover:bg-peach-light transition-colors duration-200">
+              <td class="px-4 py-3 text-[13px] text-text-muted font-medium">{{ (currentPage() - 1) * pageSize + i + 1 }}</td>
+              <td class="px-4 py-3 text-[13px]">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-[34px] h-[34px] rounded-md bg-gradient-to-br from-peach-light to-peach
+                              flex items-center justify-center shrink-0">
+                    <svg class="w-[14px] h-[14px] text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-text-primary truncate">{{ track.title || track.fileName }}</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-[13px] text-sage-dark font-medium whitespace-nowrap">{{ track.artist?.name || '—' }}</td>
+              <td class="px-4 py-3 text-[13px] text-text-secondary whitespace-nowrap hidden md:table-cell">{{ track.album?.name || '—' }}</td>
+              <td class="px-4 py-3 text-[13px] hidden md:table-cell">
+                @if (track.genres && track.genres.length > 0) {
+                  <span class="text-[11px] font-medium text-sage-dark bg-sage/10 px-2.5 py-1 rounded-full">
+                    {{ track.genres[0].name }}
+                  </span>
+                } @else {
+                  <span class="text-text-muted">—</span>
+                }
+              </td>
+              <td class="px-4 py-3 text-[13px] text-text-secondary font-medium tabular-nums whitespace-nowrap">
+                {{ trackService.formatDuration(track.durationSeconds) }}
+              </td>
+              <td class="px-4 py-3 text-xs text-text-muted whitespace-nowrap hidden md:table-cell">
+                {{ trackService.formatFileSize(track.fileSize) }}
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex items-center justify-center gap-4 mt-6">
+      <button [disabled]="currentPage() <= 1" (click)="prevPage()" id="btn-prev"
+              class="px-4.5 py-2 text-[13px] font-medium text-sage-dark bg-alabaster border border-peach-light
+                     rounded-lg hover:bg-peach-light hover:border-peach transition-all duration-200
+                     disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
+        ← Précédent
+      </button>
+      <span class="text-[13px] font-semibold text-text-secondary">Page {{ currentPage() }}</span>
+      <button [disabled]="tracks().length < pageSize" (click)="nextPage()" id="btn-next"
+              class="px-4.5 py-2 text-[13px] font-medium text-sage-dark bg-alabaster border border-peach-light
+                     rounded-lg hover:bg-peach-light hover:border-peach transition-all duration-200
+                     disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
+        Suivant →
+      </button>
+    </div>
+  }
+</section>
