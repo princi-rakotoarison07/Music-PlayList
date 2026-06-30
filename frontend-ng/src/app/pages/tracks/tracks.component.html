@@ -108,7 +108,12 @@
                   <span class="font-semibold text-text-primary truncate">{{ track.title || track.fileName }}</span>
                 </div>
               </td>
-              <td class="px-4 py-3 text-[13px] text-sage-dark font-medium whitespace-nowrap">{{ track.artist?.name || '—' }}</td>
+              <td class="px-4 py-3 text-[13px] text-sage-dark font-medium whitespace-nowrap">
+                @for (a of track.artists; track a.id; let last = $last) {
+                  {{ a.name }}{{ !last ? ', ' : '' }}
+                }
+                @empty { — }
+              </td>
               <td class="px-4 py-3 text-[13px] text-text-secondary whitespace-nowrap hidden md:table-cell">{{ track.album?.name || '—' }}</td>
               <td class="px-4 py-3 text-[13px] hidden md:table-cell">
                 @if (track.genres && track.genres.length > 0) {

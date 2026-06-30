@@ -23,8 +23,10 @@ namespace backend_cs.Models
         
         public long FileSize { get; set; }
         
-        public int? ArtistId { get; set; }
-        public Artist? Artist { get; set; }
+        [MaxLength(50)]
+        public string Language { get; set; } = "Unknown";
+        
+        public ICollection<Artist> Artists { get; set; } = new List<Artist>();
         
         public int? AlbumId { get; set; }
         public Album? Album { get; set; }

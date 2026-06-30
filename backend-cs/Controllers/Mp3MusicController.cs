@@ -26,7 +26,7 @@ namespace backend_cs.Controllers
             [FromQuery] int pageSize = 10)
         {
             var query = _context.Mp3MetaDatas
-                .Include(m => m.Artist)
+                .Include(m => m.Artists)
                 .Include(m => m.Album)
                 .Include(m => m.Genres)
                 .AsQueryable();
@@ -35,7 +35,7 @@ namespace backend_cs.Controllers
                 query = query.Where(m => m.Title.ToLower().Contains(title.ToLower()));
                 
             if (!string.IsNullOrWhiteSpace(artist))
-                query = query.Where(m => m.Artist != null && m.Artist.Name.ToLower().Contains(artist.ToLower()));
+                query = query.Where(m => m.Artists.Any(a => a.Name.ToLower().Contains(artist.ToLower())));
                 
             if (!string.IsNullOrWhiteSpace(album))
                 query = query.Where(m => m.Album != null && m.Album.Name.ToLower().Contains(album.ToLower()));
@@ -58,7 +58,7 @@ namespace backend_cs.Controllers
         public async Task<ActionResult<Mp3MetaData>> GetMp3Music(int id)
         {
             var mp3MetaData = await _context.Mp3MetaDatas
-                .Include(m => m.Artist)
+                .Include(m => m.Artists)
                 .Include(m => m.Album)
                 .Include(m => m.Genres)
                 .FirstOrDefaultAsync(m => m.Id == id);

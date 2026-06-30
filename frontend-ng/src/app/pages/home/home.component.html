@@ -49,7 +49,12 @@
           <!-- Info -->
           <div class="flex-1 min-w-0">
             <h3 class="text-sm font-semibold text-text-primary truncate">{{ track.title || track.fileName }}</h3>
-            <p class="text-[13px] font-medium text-sage-dark">{{ track.artist?.name || 'Artiste inconnu' }}</p>
+            <p class="text-[13px] font-medium text-sage-dark">
+              @for (a of track.artists; track a.id; let last = $last) {
+                {{ a.name }}{{ !last ? ', ' : '' }}
+              }
+              @empty { Artiste inconnu }
+            </p>
             <p class="text-xs text-text-muted">{{ track.album?.name || 'Album inconnu' }}</p>
           </div>
           <!-- Meta -->

@@ -21,8 +21,8 @@ export interface Track {
   fileName: string;
   filePath: string;
   fileSize: number;
-  artistId: number | null;
-  artist: Artist | null;
+  language: string;
+  artists: Artist[];
   albumId: number | null;
   album: Album | null;
   year: number | null;
@@ -35,4 +35,33 @@ export interface Track {
   createdAt: string;
   extractedAt: string;
   genres: Genre[];
+}
+
+export interface Playlist {
+  id: number;
+  name: string;
+  targetDurationSeconds: number;
+  createdAt: string;
+  trackCount: number;
+}
+
+export interface PlaylistFilters {
+  genres: string[];
+  artists: string[];
+  languages: string[];
+}
+
+export interface GeneratePlaylistCriteria {
+  targetDurationMinutes: number;
+  genre: string;
+  language: string;
+  artists: string[];
+  excludedGenres: string[];
+  excludedArtists: string[];
+}
+
+export interface SavePlaylistDto {
+  name: string;
+  targetDurationMinutes: number;
+  trackIds: number[];
 }

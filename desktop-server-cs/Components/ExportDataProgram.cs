@@ -1,4 +1,4 @@
-﻿using desktop_server_app.Config;
+using desktop_server_app.Config;
 using desktop_server_app.Models;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -170,10 +170,11 @@ namespace desktop_server_app.Components
                 : entry.FileName;
 
             string title = tag.Title ?? defaultTitle;
+            var artists = tag.Performers ?? Array.Empty<string>();
 
             AppLogger.Log("Task2",
                 $"Tags — '{entry.FileName}': " +
-                $"Title='{title}', Artist='{tag.FirstPerformer}', " +
+                $"Title='{title}', Artists='{string.Join(", ", artists)}', " +
                 $"Album='{tag.Album}', Year={tag.Year}, " +
                 $"Duration={audio.Duration}");
 
@@ -186,9 +187,10 @@ namespace desktop_server_app.Components
                 ExtractedAt = DateTime.UtcNow,
 
                 Title = tag.Title ?? defaultTitle,
-                Artist = tag.FirstPerformer ?? string.Empty,
+                Artists = tag.Performers ?? Array.Empty<string>(),
                 Album = tag.Album ?? string.Empty,
                 AlbumArtist = tag.FirstAlbumArtist ?? string.Empty,
+                Language = "Unknown",
                 Year = tag.Year,
                 Track = tag.Track,
                 Genres = tag.Genres ?? Array.Empty<string>(),

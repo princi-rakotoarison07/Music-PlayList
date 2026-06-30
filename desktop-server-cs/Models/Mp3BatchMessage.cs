@@ -1,4 +1,4 @@
-﻿namespace desktop_server_app.Models
+namespace desktop_server_app.Models
 {
     // ────────────────────────────────────────────────────────────────────────────
     // Queue 1 → 2  :  playlist-scan-queue
@@ -47,9 +47,10 @@
 
         // ID3 tags
         public string Title { get; set; } = string.Empty;
-        public string Artist { get; set; } = string.Empty;
+        public string[] Artists { get; set; } = Array.Empty<string>();
         public string Album { get; set; } = string.Empty;
         public string AlbumArtist { get; set; } = string.Empty;
+        public string Language { get; set; } = "Unknown";
         public uint Year { get; set; }
         public uint Track { get; set; }
         public string[] Genres { get; set; } = Array.Empty<string>();

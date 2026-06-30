@@ -37,14 +37,18 @@ namespace backend_cs.Controllers
 
             foreach (var dto in batch.Tracks)
             {
-                _logger.LogDebug("Processing track: {FileName} (Title: {Title}, Artist: {Artist}, Album: {Album})",
-                    dto.FileName, dto.Title, dto.Artist, dto.Album);
+                _logger.LogDebug("Processing track: {FileName} (Title: {Title}, Artists: {Artists}, Album: {Album})",
+                    dto.FileName, dto.Title, string.Join(", ", dto.Artists), dto.Album);
 
-                // Find or create Artist
-                var artist = await GetOrCreateArtist(dto.Artist);
+                var primaryArtistName = !string.IsNullOrWhiteSpace(dto.AlbumArtist) 
+                    ? dto.AlbumArtist 
+                    : (dto.Artists != null && dto.Artists.Length > 0 ? dto.Artists[0] : "Unknown Artist");
+                    
+                // Find or create primary Album Artist for the Album relationship
+                var albumArtist = await GetOrCreateArtist(primaryArtistName);
                 
                 // Find or create Album
-                var album = await GetOrCreateAlbum(dto.Album, artist.Id);
+                var album = await GetOrCreateAlbum(dto.Album, albumArtist.Id);
                 
                 // Look for existing track by server file path (unique)
                 var existing = await _db.Mp3MetaDatas
@@ -58,8 +62,8 @@ namespace backend_cs.Controllers
                 track.FileName = dto.FileName;
                 track.FilePath = dto.FilePath;
                 track.FileSize = dto.FileSize;
-                track.ArtistId = artist.Id;
                 track.AlbumId = album.Id;
+                track.Language = dto.Language;
                 track.Year = dto.Year > 0 ? (short?)Math.Clamp(dto.Year, 0u, (uint)short.MaxValue) : null;
                 track.DurationSeconds = dto.DurationSeconds;
                 track.Comment = dto.Comment;
@@ -82,6 +86,9 @@ namespace backend_cs.Controllers
 
                 // Process Genres (many‑to‑many)
                 await UpdateGenresForTrack(track, dto.Genres, isNew);
+
+                // Process Artists (many-to-many)
+                await UpdateArtistsForTrack(track, dto.Artists, isNew);
             }
 
             await _db.SaveChangesAsync();
@@ -215,6 +222,53 @@ namespace backend_cs.Controllers
                 }
                 track.Genres.Add(genre);
             }
+        }
+
+        private async Task UpdateArtistsForTrack(Mp3MetaData track, string[]? artistNames, bool isNew)
+        {
+            if (!isNew)
+            {
+                await _db.Entry(track).Collection(t => t.Artists).LoadAsync();
+                track.Artists.Clear();
+            }
+
+            if (artistNames == null || artistNames.Length == 0) return;
+
+            foreach (var artistName in artistNames.Distinct())
+            {
+                if (string.IsNullOrWhiteSpace(artistName)) continue;
+
+                var artist = await _db.Artists.FirstOrDefaultAsync(a => a.Name == artistName);
+                if (artist == null)
+                {
+                    artist = new Artist { Name = artistName };
+                    _db.Artists.Add(artist);
+                    
+                    try
+                    {
+                        await _db.SaveChangesAsync();
+                    }
+                    catch (DbUpdateException)
+                    {
+                        _db.Entry(artist).State = EntityState.Detached;
+                        artist = await _db.Artists.FirstOrDefaultAsync(a => a.Name == artistName)
+                            ?? throw new InvalidOperationException($"Failed to create or find artist '{artistName}'.");
+                    }
+                }
+                track.Artists.Add(artist);
+            }
+        }
+
+        // ── GET /api/tracks/stream/{id} ────────────────────────────────────────
+        [HttpGet("stream/{id}")]
+        public async Task<IActionResult> StreamAudio(int id)
+        {
+            var track = await _db.Mp3MetaDatas.FindAsync(id);
+            if (track == null || !System.IO.File.Exists(track.FilePath))
+                return NotFound("Track not found or file missing.");
+
+            var stream = new FileStream(track.FilePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+            return File(stream, "audio/mpeg", enableRangeProcessing: true);
         }
     }
 }

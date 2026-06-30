@@ -1,4 +1,4 @@
-﻿using desktop_server_app.Config;
+using desktop_server_app.Config;
 using desktop_server_app.Models;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -129,7 +129,8 @@ namespace desktop_server_app.Components
                             FilePath = serverPaths[track.FilePath],   // server-side path
                             FileSize = track.FileSize,
                             Title = track.Title,
-                            Artist = track.Artist,
+                            Artists = track.Artists,
+                            Language = track.Language,
                             Album = track.Album,
                             AlbumArtist = track.AlbumArtist,
                             Year = track.Year,
@@ -221,7 +222,7 @@ namespace desktop_server_app.Components
                 content.Add(streamContent, "file", track.FileName);
 
                 content.Add(new StringContent(track.Title), "title");
-                content.Add(new StringContent(track.Artist), "artist");
+                content.Add(new StringContent(string.Join(", ", track.Artists)), "artist");
                 content.Add(new StringContent(track.Album), "album");
                 content.Add(new StringContent(track.FileName), "fileName");
 

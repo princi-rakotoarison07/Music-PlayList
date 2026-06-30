@@ -16,5 +16,6 @@ namespace backend_cs.Models
         
         [JsonIgnore]
         public ICollection<Album> Albums { get; set; } = new List<Album>();
+        public ICollection<Mp3MetaData> Mp3s { get; set; } = new List<Mp3MetaData>();
     }
 }

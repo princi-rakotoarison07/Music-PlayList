@@ -11,6 +11,8 @@ namespace backend_cs.Data
         public DbSet<Album> Albums { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Mp3MetaData> Mp3MetaDatas { get; set; }
+        public DbSet<Playlist> Playlists { get; set; }
+        public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,6 +25,15 @@ namespace backend_cs.Data
                 .UsingEntity<Dictionary<string, object>>(
                     "Mp3Genre",
                     j => j.HasOne<Genre>().WithMany().HasForeignKey("GenreId").OnDelete(DeleteBehavior.Cascade),
+                    j => j.HasOne<Mp3MetaData>().WithMany().HasForeignKey("Mp3Id").OnDelete(DeleteBehavior.Cascade)
+                );
+                
+            modelBuilder.Entity<Mp3MetaData>()
+                .HasMany(m => m.Artists)
+                .WithMany(a => a.Mp3s)
+                .UsingEntity<Dictionary<string, object>>(
+                    "Mp3Artist",
+                    j => j.HasOne<Artist>().WithMany().HasForeignKey("ArtistId").OnDelete(DeleteBehavior.Cascade),
                     j => j.HasOne<Mp3MetaData>().WithMany().HasForeignKey("Mp3Id").OnDelete(DeleteBehavior.Cascade)
                 );
                 
