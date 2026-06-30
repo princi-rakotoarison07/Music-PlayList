@@ -1,0 +1,47 @@
+<header class="sticky top-0 z-50 bg-alabaster border-b border-peach-light shadow-sm">
+  <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Brand -->
+    <a routerLink="/" class="flex items-center gap-2.5 hover:scale-[1.02] transition-transform duration-200">
+      <span class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-peach to-sage rounded-lg text-white">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </span>
+      <span class="text-lg font-bold text-text-primary tracking-tight">
+        Music<span class="text-sage">Playlist</span>
+      </span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="flex items-center gap-1.5">
+      <a routerLink="/"
+         routerLinkActive="bg-peach-light text-sage-dark font-semibold"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium text-text-secondary hover:text-sage-dark hover:bg-peach-light transition-all duration-200">
+        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Accueil
+      </a>
+      <a routerLink="/tracks"
+         routerLinkActive="bg-peach-light text-sage-dark font-semibold"
+         class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium text-text-secondary hover:text-sage-dark hover:bg-peach-light transition-all duration-200">
+        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18V5l12-2v13"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="16" r="3"/>
+        </svg>
+        Toutes les chansons
+      </a>
+      <a routerLink="/playlists"
+         routerLinkActive="bg-peach-light text-sage-dark font-semibold"
+         class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium text-text-secondary hover:text-sage-dark hover:bg-peach-light transition-all duration-200">
+        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        </svg>
+        Playlists
+      </a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,89 @@
+<section class="max-w-[1200px] mx-auto px-6 pb-16">
+  <!-- Hero -->
+  <div class="pt-12 pb-8 text-center">
+    <div class="max-w-[600px] mx-auto">
+      <p class="text-[13px] font-medium capitalize text-sage tracking-wide mb-2">
+        {{ today | date:'EEEE d MMMM yyyy' }}
+      </p>
+      <h1 class="text-[32px] font-bold text-text-primary tracking-tight mb-2">Playlist du Jour</h1>
+      <p class="text-[15px] text-text-muted leading-relaxed">
+        Découvrez les derniers morceaux ajoutés à votre bibliothèque musicale
+      </p>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  @if (loading()) {
+    <div class="text-center py-16 text-text-muted">
+      <div class="w-9 h-9 border-3 border-peach-light border-t-sage rounded-full mx-auto mb-4 animate-spin"></div>
+      <p>Chargement de la playlist…</p>
+    </div>
+  }
+
+  <!-- Empty -->
+  @if (!loading() && tracks().length === 0) {
+    <div class="text-center py-16">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-peach-light flex items-center justify-center">
+        <svg class="w-8 h-8 text-peach" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-text-primary mb-2">Aucune chanson pour le moment</h2>
+      <p class="text-text-muted text-sm">Ajoutez des fichiers MP3 dans le dossier scanné pour les voir apparaître ici.</p>
+    </div>
+  }
+
+  <!-- Track Grid -->
+  @if (!loading() && tracks().length > 0) {
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      @for (track of tracks(); track track.id) {
+        <div class="flex items-center gap-3.5 p-4 bg-alabaster border border-peach-light rounded-xl
+                    hover:-translate-y-0.5 hover:shadow-lg hover:border-peach transition-all duration-200 cursor-default">
+          <!-- Cover icon -->
+          <div class="w-[52px] h-[52px] rounded-lg bg-gradient-to-br from-peach-light to-peach
+                      flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+          </div>
+          <!-- Info -->
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-semibold text-text-primary truncate">{{ track.title || track.fileName }}</h3>
+            <p class="text-[13px] font-medium text-sage-dark">
+              @for (a of track.artists; track a.id; let last = $last) {
+                {{ a.name }}{{ !last ? ', ' : '' }}
+              }
+              @empty { Artiste inconnu }
+            </p>
+            <p class="text-xs text-text-muted">{{ track.album?.name || 'Album inconnu' }}</p>
+          </div>
+          <!-- Meta -->
+          <div class="flex flex-col items-end gap-1 shrink-0">
+            <span class="text-[13px] font-semibold text-text-secondary tabular-nums">
+              {{ trackService.formatDuration(track.durationSeconds) }}
+            </span>
+            @if (track.genres && track.genres.length > 0) {
+              <span class="text-[11px] font-medium text-sage-dark bg-sage/10 px-2 py-0.5 rounded-full">
+                {{ track.genres[0].name }}
+              </span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-8">
+      <a routerLink="/tracks"
+         class="inline-flex items-center gap-2 px-7 py-3 bg-sage text-white text-sm font-semibold
+                rounded-2xl hover:bg-sage-dark hover:-translate-y-0.5 hover:shadow-lg
+                hover:shadow-sage/30 transition-all duration-200">
+        Voir toutes les chansons
+        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  }
+</section>
