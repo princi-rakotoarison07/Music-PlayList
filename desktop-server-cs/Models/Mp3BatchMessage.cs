@@ -92,5 +92,9 @@ namespace desktop_server_app.Models
         public DateTime UploadedAt { get; set; } = DateTime.UtcNow;
         public string SourceDir { get; set; } = string.Empty;
         public int TrackCount { get; set; }
+        /// <summary>
+        /// File names rejected by blacklist or duration limit — Task 4 must NOT delete these.
+        /// </summary>
+        public List<string> RejectedFileNames { get; set; } = new();
     }
 }

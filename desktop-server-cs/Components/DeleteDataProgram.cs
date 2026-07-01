@@ -1,4 +1,4 @@
-﻿using desktop_server_app.Config;
+using desktop_server_app.Config;
 using desktop_server_app.Models;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -11,6 +11,7 @@ namespace desktop_server_app.Components
     /// Task 4 — Directory cleaner.
     /// Consumes <see cref="UploadSuccessMessage"/> from <c>playlist-upload-queue</c>
     /// and deletes every .mp3 file in the source directory that was just uploaded.
+    /// Files rejected by blacklist or duration limit are NOT deleted — they stay in the scan folder.
     /// Only runs after a confirmed upload success — files are never deleted speculatively.
     /// Does NOT call any other task directly.
     /// </summary>
@@ -55,7 +56,18 @@ namespace desktop_server_app.Components
                         $"'{msg.SourceDir}' uploaded at {msg.UploadedAt:u}. " +
                         $"Starting cleanup.");
 
-                    int deleted = DeleteMp3Files(msg.SourceDir, cancellationToken);
+                    // Build set of rejected file names to preserve
+                    var rejectedSet = new HashSet<string>(
+                        msg.RejectedFileNames ?? new List<string>(),
+                        StringComparer.OrdinalIgnoreCase);
+
+                    if (rejectedSet.Count > 0)
+                    {
+                        AppLogger.Log("Task4",
+                            $"{rejectedSet.Count} file(s) rejected (blacklist/duration) — will NOT be deleted.");
+                    }
+
+                    int deleted = DeleteMp3Files(msg.SourceDir, rejectedSet, cancellationToken);
 
                     AppLogger.Log("Task4",
                         $"Cleanup done — {deleted} file(s) deleted from '{msg.SourceDir}'.");
@@ -88,7 +100,7 @@ namespace desktop_server_app.Components
 
         // ── Private ───────────────────────────────────────────────────────────────
 
-        private static int DeleteMp3Files(string directoryPath, CancellationToken ct)
+        private static int DeleteMp3Files(string directoryPath, HashSet<string> rejectedFileNames, CancellationToken ct)
         {
             if (!Directory.Exists(directoryPath))
             {
@@ -104,6 +116,7 @@ namespace desktop_server_app.Components
             }
 
             int deleted = 0;
+            int skipped = 0;
             int failed = 0;
 
             const int maxRetries = 5;
@@ -113,13 +126,23 @@ namespace desktop_server_app.Components
             {
                 ct.ThrowIfCancellationRequested();
 
+                string fileName = Path.GetFileName(filePath);
+
+                // Skip rejected files — they must remain in the scan folder
+                if (rejectedFileNames.Contains(fileName))
+                {
+                    AppLogger.Log("Task4", $"Skipped (rejected): {fileName}");
+                    skipped++;
+                    continue;
+                }
+
                 bool success = false;
                 for (int attempt = 1; attempt <= maxRetries; attempt++)
                 {
                     try
                     {
                         File.Delete(filePath);
-                        AppLogger.Log("Task4", $"Deleted: {Path.GetFileName(filePath)}");
+                        AppLogger.Log("Task4", $"Deleted: {fileName}");
                         deleted++;
                         success = true;
                         break;
@@ -127,19 +150,21 @@ namespace desktop_server_app.Components
                     catch (Exception ex) when (attempt < maxRetries)
                     {
                         AppLogger.Log("Task4",
-                            $"Retry {attempt}/{maxRetries} for '{Path.GetFileName(filePath)}': {ex.Message}");
+                            $"Retry {attempt}/{maxRetries} for '{fileName}': {ex.Message}");
                         Thread.Sleep(delayMilliseconds);
                     }
                     catch (Exception ex)
                     {
                         AppLogger.Log("Task4",
-                            $"Failed to delete '{Path.GetFileName(filePath)}' after {maxRetries} attempts: {ex.Message}");
+                            $"Failed to delete '{fileName}' after {maxRetries} attempts: {ex.Message}");
                         failed++;
                         break;
                     }
                 }
             }
 
+            if (skipped > 0)
+                AppLogger.Log("Task4", $"{skipped} file(s) skipped (rejected by blacklist/duration).");
             if (failed > 0)
                 AppLogger.Log("Task4", $"Warning: {failed} file(s) could not be deleted.");
 

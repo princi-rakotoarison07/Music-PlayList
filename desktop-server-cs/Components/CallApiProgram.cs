@@ -24,6 +24,9 @@ namespace desktop_server_app.Components
         private readonly string _blacklistEndpoint;
         private readonly HttpClient _http;
 
+        private static readonly string _durationLimitPath = Path.Combine(
+            Environment.CurrentDirectory, "Config", "json", "limit_duree_second.json");
+
         private static readonly JsonSerializerOptions _jsonOpts = new() { WriteIndented = true };
 
         public CallApiProgram()
@@ -36,8 +39,7 @@ namespace desktop_server_app.Components
                 ?? throw new InvalidOperationException("Missing 'Api:UploadEndpoint'.");
 
             // We construct the blacklist endpoint assuming standard REST structure
-            var baseUri = new Uri(_metadataEndpoint);
-            _blacklistEndpoint = $"{baseUri.Scheme}://{baseUri.Host}:{baseUri.Port}/api/blacklist";
+            _blacklistEndpoint = "http://localhost:5001/api/blacklist";
 
             _http = new HttpClient
             {
@@ -97,7 +99,9 @@ namespace desktop_server_app.Components
 
                     // Fetch current blacklist
                     var blacklist = await FetchBlacklistAsync(cancellationToken);
+                    int durationLimit = ReadDurationLimitSeconds();
                     var validTracks = new List<Mp3Metadata>();
+                    var rejectedFileNames = new List<string>(); // fichiers rejetés (blacklist/durée)
 
                     foreach (var track in batch.Tracks)
                     {
@@ -117,8 +121,19 @@ namespace desktop_server_app.Components
 
                         if (isBlacklisted)
                         {
-                            AppLogger.Log("Task3", $"Track '{track.FileName}' is blacklisted. Rejecting.");
-                            continue; // Skip uploading and saving this track
+                            AppLogger.Log("Task3", $"Track '{track.FileName}' is blacklisted. Rejecting (file kept in scan folder).");
+                            rejectedFileNames.Add(track.FileName);
+                            continue;
+                        }
+
+                        // Check duration limit
+                        if (durationLimit > 0 && track.DurationSeconds > durationLimit)
+                        {
+                            AppLogger.Log("Task3",
+                                $"Track '{track.FileName}' exceeds duration limit " +
+                                $"({track.DurationSeconds}s > {durationLimit}s). Rejecting (file kept in scan folder).");
+                            rejectedFileNames.Add(track.FileName);
+                            continue;
                         }
 
                         if (!File.Exists(track.FilePath))
@@ -195,7 +210,8 @@ namespace desktop_server_app.Components
                     {
                         UploadedAt = DateTime.UtcNow,
                         SourceDir = batch.SourceDir,
-                        TrackCount = batch.Tracks.Count
+                        TrackCount = batch.Tracks.Count,
+                        RejectedFileNames = rejectedFileNames
                     };
 
                     var outBody = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(success));
@@ -326,6 +342,29 @@ namespace desktop_server_app.Components
                 AppLogger.Log("Task3", $"Failed to fetch blacklist: {ex.Message}");
             }
             return new List<BlacklistRuleDto>();
+        }
+
+        /// <summary>
+        /// Reads the duration limit (in seconds) from the local JSON config.
+        /// Returns 0 if the file is missing or invalid (meaning no limit).
+        /// </summary>
+        private static int ReadDurationLimitSeconds()
+        {
+            try
+            {
+                if (!File.Exists(_durationLimitPath)) return 0;
+                var text = File.ReadAllText(_durationLimitPath).Trim();
+                if (int.TryParse(text, out int seconds) && seconds > 0)
+                {
+                    AppLogger.Log("Task3", $"Duration limit loaded: {seconds}s.");
+                    return seconds;
+                }
+            }
+            catch (Exception ex)
+            {
+                AppLogger.Log("Task3", $"Failed to read duration limit: {ex.Message}");
+            }
+            return 0;
         }
 
         public class BlacklistRuleDto

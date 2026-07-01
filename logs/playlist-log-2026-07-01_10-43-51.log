@@ -1,0 +1,1021 @@
+[2026-07-01 10:43:51] [SYSTEM] Logger initialized. Log file: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\logs\playlist-log-2026-07-01_10-43-51.log
+[2026-07-01 10:43:51] [SYSTEM] Starting: desktop-server-app
+[2026-07-01 10:43:51] [SYSTEM] Pipeline: Task1 → [scan-queue] → Task2 → [extract-queue] → Task3 → [upload-queue] → Task4
+[2026-07-01 10:43:51] [SYSTEM] Local API Server started on http://localhost:5001
+[2026-07-01 10:43:51] [Task1] Started — watching: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3
+[2026-07-01 10:43:51] [Task1] Scan interval: 6 second(s)
+[2026-07-01 10:43:51] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:43:51] [Task2] Started — consuming 'playlist-scan-queue'.
+[2026-07-01 10:43:51] [Task3] Started — consuming 'playlist-extract-queue'.
+[2026-07-01 10:43:51] [Task4] Started — consuming 'playlist-upload-queue'.
+[2026-07-01 10:43:51] [Task4] Waiting for upload confirmations. Press Ctrl+C to stop.
+[2026-07-01 10:43:51] [Task3] Waiting for metadata batches. Press Ctrl+C to stop.
+[2026-07-01 10:43:51] [Task2] Waiting for scan batches. Press Ctrl+C to stop.
+[2026-07-01 10:43:51] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:43:51] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:43:51Z.
+[2026-07-01 10:43:51] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:43:51] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:43:51] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:43:51] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:43:51] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:43:52] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:43:52] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:43:52] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:43:52] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:43:52] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:43:52Z. Starting cleanup.
+[2026-07-01 10:43:52] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:43:52] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:43:52] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:43:52] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:43:57] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:43:57] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:43:57] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:43:57Z.
+[2026-07-01 10:43:57] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:43:57] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:43:57] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:43:57] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:43:57] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:43:57] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:43:57] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:43:57] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:43:57] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:43:57Z. Starting cleanup.
+[2026-07-01 10:43:57] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:43:57] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:43:57] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:43:57] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:43:57] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:03] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:03] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:04] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:03Z.
+[2026-07-01 10:44:04] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:04] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:04] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:04] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:04] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:44:04] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:44:04] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:04] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:04] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:04] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:04Z. Starting cleanup.
+[2026-07-01 10:44:04] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:04] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:04] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:04] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:10] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:10] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:10] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:10Z.
+[2026-07-01 10:44:10] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:10] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:10] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:10] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:10] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:44:10] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:44:10] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:10] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:10] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:10Z. Starting cleanup.
+[2026-07-01 10:44:10] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:10] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:10] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:10] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:10] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:16] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:16] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:16] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:16Z.
+[2026-07-01 10:44:16] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:16] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:16] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:16] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:16] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:44:16] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:44:16] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:16] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:16] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:16Z. Starting cleanup.
+[2026-07-01 10:44:16] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:16] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:16] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:16] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:16] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:22] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:22] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:22] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:22Z.
+[2026-07-01 10:44:22] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:22] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:22] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:22] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:22] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:44:22] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:44:22] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:22] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:22] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:22Z. Starting cleanup.
+[2026-07-01 10:44:22] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:22] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:22] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:22] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:22] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:28] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:28] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:28] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:28Z.
+[2026-07-01 10:44:28] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:28] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:28] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:28] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:28] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:44:28] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:44:28] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:28] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:28] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:28Z. Starting cleanup.
+[2026-07-01 10:44:28] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:28] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:28] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:28] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:28] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:34] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:34] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:34] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:34Z.
+[2026-07-01 10:44:34] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:34] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:34] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:34] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:34] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:44:34] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:44:34] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:34] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:34] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:34] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:34Z. Starting cleanup.
+[2026-07-01 10:44:34] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:34] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:34] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:34] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:40] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:40] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:40] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:40Z.
+[2026-07-01 10:44:40] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:40] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:40] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:40] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:40] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:44:40] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting (file kept in scan folder).
+[2026-07-01 10:44:40] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:40] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:40] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:40Z. Starting cleanup.
+[2026-07-01 10:44:40] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:40] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:40] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:40] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:40] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:46] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:46] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:46] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:46Z.
+[2026-07-01 10:44:46] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:46] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:46] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:46] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:46] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:44:46] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:44:46] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:46] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:46] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:46] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:46Z. Starting cleanup.
+[2026-07-01 10:44:46] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:46] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:46] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:46] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:52] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:53] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:53] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:52Z.
+[2026-07-01 10:44:53] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:53] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:53] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:53] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:53] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:44:53] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:44:53] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:53] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:53] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:53] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:53Z. Starting cleanup.
+[2026-07-01 10:44:53] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:53] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:53] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:53] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:59] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:44:59] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:44:59] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:44:59Z.
+[2026-07-01 10:44:59] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:44:59] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:44:59] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:44:59] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:44:59] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:44:59] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:44:59] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:44:59] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:44:59] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:44:59] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:44:59Z. Starting cleanup.
+[2026-07-01 10:44:59] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:44:59] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:44:59] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:44:59] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:05] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:05] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:05] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:05Z.
+[2026-07-01 10:45:05] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:05] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:05] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:05] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:05] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:05] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:05] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:05] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:05] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:05] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:05Z. Starting cleanup.
+[2026-07-01 10:45:05] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:05] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:05] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:05] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:11] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:11] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:11] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:11Z.
+[2026-07-01 10:45:11] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:11] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:11] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:11] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:11] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:11] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:11] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:11] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:11] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:11] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:11Z. Starting cleanup.
+[2026-07-01 10:45:11] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:11] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:11] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:11] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:17] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:17] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:17] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:17Z.
+[2026-07-01 10:45:17] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:17] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:17] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:17] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:17] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:17] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:17] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:17] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:17] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:17Z. Starting cleanup.
+[2026-07-01 10:45:17] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:17] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:17] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:17] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:17] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:23] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:23] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:23] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:23Z.
+[2026-07-01 10:45:23] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:23] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:23] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:23] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:23] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:23] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:23] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:23] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:23] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:23Z. Starting cleanup.
+[2026-07-01 10:45:23] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:23] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:23] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:23] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:23] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:29] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:29] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:29] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:29Z.
+[2026-07-01 10:45:29] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:29] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:29] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:29] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:29] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:29] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:29] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:29] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:29] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:29Z. Starting cleanup.
+[2026-07-01 10:45:29] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:29] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:29] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:29] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:29] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:35] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:35] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:35] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:35Z.
+[2026-07-01 10:45:35] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:35] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:35] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:35] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:35] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:35] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:35] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:35] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:35] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:35] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:35Z. Starting cleanup.
+[2026-07-01 10:45:35] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:35] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:35] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:35] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:41] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:42] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:42] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:41Z.
+[2026-07-01 10:45:42] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:42] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:42] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:42] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:42] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:42] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:42] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:42] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:42] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:42Z. Starting cleanup.
+[2026-07-01 10:45:42] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:42] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:42] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:42] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:48] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:48] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:48] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:48Z.
+[2026-07-01 10:45:48] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:48] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:48] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:48] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:48] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:48] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:48] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:48] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:48] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:48Z. Starting cleanup.
+[2026-07-01 10:45:48] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:48] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:48] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:48] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:45:54] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:45:54] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:45:54] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:45:54Z.
+[2026-07-01 10:45:54] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:45:54] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:45:54] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:45:54] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:54] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:45:54] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:45:54] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:45:54] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:45:54] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:45:54Z. Starting cleanup.
+[2026-07-01 10:45:54] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:45:54] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:45:54] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:45:54] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:45:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:00] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:00] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:00] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:00Z.
+[2026-07-01 10:46:00] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:00] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:00] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:00] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:00] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:00] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:00] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:00] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:00] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:00Z. Starting cleanup.
+[2026-07-01 10:46:00] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:00] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:00] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:00] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:06] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:06] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:06] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:06Z.
+[2026-07-01 10:46:06] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:06] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:06] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:06] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:06] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:06] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:06] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:06] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:06] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:06Z. Starting cleanup.
+[2026-07-01 10:46:06] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:06] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:06] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:06] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:12] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:12] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:12] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:12Z.
+[2026-07-01 10:46:12] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:12] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:12] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:12] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:12] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:12] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:12] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:12] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:12] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:12Z. Starting cleanup.
+[2026-07-01 10:46:12] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:12] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:12] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:12] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:18] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:18] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:18] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:18Z.
+[2026-07-01 10:46:18] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:18] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:18] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:18] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:18] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:18] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:18] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:18] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:18] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:18Z. Starting cleanup.
+[2026-07-01 10:46:18] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:18] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:18] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:18] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:24] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:24] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:24] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:24Z.
+[2026-07-01 10:46:24] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:24] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:24] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:24] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:24] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:24] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:24] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:24] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:24] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:24Z. Starting cleanup.
+[2026-07-01 10:46:24] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:24] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:24] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:24] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:30] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:31] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:31] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:30Z.
+[2026-07-01 10:46:31] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:31] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:31] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:31] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:31] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:31] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:31] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:31] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:31] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:31Z. Starting cleanup.
+[2026-07-01 10:46:31] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:31] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:31] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:31] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:37] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:37] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:37] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:37Z.
+[2026-07-01 10:46:37] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:37] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:37] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:37] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:37] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:37] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:37] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:37] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:37] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:37Z. Starting cleanup.
+[2026-07-01 10:46:37] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:37] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:37] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:37] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:43] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:43] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:43] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:43Z.
+[2026-07-01 10:46:43] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:43] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:43] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:43] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:43] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:43] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:43] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:43] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:43] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:43Z. Starting cleanup.
+[2026-07-01 10:46:43] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:43] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:43] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:43] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:49] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:49] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:49] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:49Z.
+[2026-07-01 10:46:49] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:49] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:49] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:49] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:49] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:49] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:49] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:49] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:46:49] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:49Z. Starting cleanup.
+[2026-07-01 10:46:49] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:49] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:49] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:49] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:55] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:46:55] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:46:55] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:46:55Z.
+[2026-07-01 10:46:55] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:46:55] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:46:55] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:46:55] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:55] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:46:55] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:46:55] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:46:55] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:46:55] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:46:55Z. Starting cleanup.
+[2026-07-01 10:46:55] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:46:55] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:46:55] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:46:55] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:46:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:01] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:47:01] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:47:01] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:01Z.
+[2026-07-01 10:47:01] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:01] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:47:01] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:01] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:01] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:47:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:01] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:01] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:01] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:01] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:01Z. Starting cleanup.
+[2026-07-01 10:47:01] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:01] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:01] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:01] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:07] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:47:07] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:47:07] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:07Z.
+[2026-07-01 10:47:07] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:07] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:47:07] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:07] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:07] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:47:07] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:07] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:07] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:07] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:07Z. Starting cleanup.
+[2026-07-01 10:47:07] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:07] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:07] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:07] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:13] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:47:13] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:47:13] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:13Z.
+[2026-07-01 10:47:13] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:13] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:47:13] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:13] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:13] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:47:13] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:13] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:13] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:14] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:14] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:13Z. Starting cleanup.
+[2026-07-01 10:47:14] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:14] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:14] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:14] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:20] [Task1] Found 1 file(s) total, 1 .mp3 file(s).
+[2026-07-01 10:47:20] [Task1] Published scan batch → 'playlist-scan-queue' (1 file(s)).
+[2026-07-01 10:47:20] [Task2] Received scan batch — 1 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:20Z.
+[2026-07-01 10:47:20] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:20] [Task2] Extraction complete — 1 record(s) ready.
+[2026-07-01 10:47:20] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:20] [Task3] Received metadata batch — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:20] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:47:20] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:20] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:20] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:20] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:20] [Task4] Upload success confirmed — 1 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:20Z. Starting cleanup.
+[2026-07-01 10:47:20] [Task4] 1 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:20] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:20] [Task4] 1 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:20] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:26] [Task1] Found 8 file(s) total, 8 .mp3 file(s).
+[2026-07-01 10:47:26] [Task1] Published scan batch → 'playlist-scan-queue' (8 file(s)).
+[2026-07-01 10:47:26] [Task2] Received scan batch — 8 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:26Z.
+[2026-07-01 10:47:26] [Task2] Tags — '04-Regarde-moi.mp3': Title='04-Regarde-moi', Artists='Lomepal - Www.33rapmp3.com et 33rapfr.com', Album='Amina - 33rap-telechargement.com', Year=2019, Duration=00:02:56.9580000
+[2026-07-01 10:47:26] [Task2] Tags — '07-Interlude.mp3': Title='Interlude', Artists='Lefa', Album='Famous', Year=2020, Duration=00:02:07.3941000
+[2026-07-01 10:47:26] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:47:26] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:26] [Task2] Tags — '09-Mômes.mp3': Title='09-Mômes', Artists='Lomepal - Www.33rapmp3.com et 33rapfr.com', Album='Amina - 33rap-telechargement.com', Year=2019, Duration=00:02:56.8797000
+[2026-07-01 10:47:26] [Task2] Tags — '8 - Ne me ramène pas.mp3': Title='Ne me ramène pas', Artists='Lomepal', Album='Amina', Year=2019, Duration=00:02:16.5935625
+[2026-07-01 10:47:26] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:47:26] [Task2] Tags — 'Antanambao.MP3': Title='Antanambao', Artists='Bekoto Augustin', Album='Album Bekoto', Year=1980, Duration=00:02:54.5666249
+[2026-07-01 10:47:26] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:26] [Task2] Extraction complete — 8 record(s) ready.
+[2026-07-01 10:47:26] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:26] [Task3] Received metadata batch — 8 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:26] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:47:26] [Task3] Uploading '04-Regarde-moi.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 10:47:26] [Task3] Uploaded '04-Regarde-moi.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\04-Regarde-moi.mp3
+[2026-07-01 10:47:26] [Task3] Uploading '07-Interlude.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 10:47:26] [Task3] Uploaded '07-Interlude.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\07-Interlude.mp3
+[2026-07-01 10:47:26] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:26] [Task3] Uploading '09-Mômes.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 10:47:26] [Task3] Uploaded '09-Mômes.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\09-Mômes.mp3
+[2026-07-01 10:47:26] [Task3] Uploading '8 - Ne me ramène pas.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 10:47:26] [Task3] Uploaded '8 - Ne me ramène pas.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\8 - Ne me ramène pas.mp3
+[2026-07-01 10:47:26] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:26] [Task3] Uploading 'Antanambao.MP3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 10:47:26] [Task3] Uploaded 'Antanambao.MP3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\Antanambao.MP3
+[2026-07-01 10:47:26] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:26] [Task3] POST metadata batch (5 track(s)) → http://localhost:5000/api/tracks/metadata
+[2026-07-01 10:47:27] [Task3] Metadata batch accepted.
+[2026-07-01 10:47:27] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:27] [Task4] Upload success confirmed — 8 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:27Z. Starting cleanup.
+[2026-07-01 10:47:27] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:27] [Task4] Deleted: 04-Regarde-moi.mp3
+[2026-07-01 10:47:27] [Task4] Deleted: 07-Interlude.mp3
+[2026-07-01 10:47:27] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:47:27] [Task4] Deleted: 09-Mômes.mp3
+[2026-07-01 10:47:27] [Task4] Deleted: 8 - Ne me ramène pas.mp3
+[2026-07-01 10:47:27] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:47:27] [Task4] Deleted: Antanambao.MP3
+[2026-07-01 10:47:27] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:27] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:27] [Task4] Cleanup done — 5 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:32] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:47:32] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:47:32] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:32Z.
+[2026-07-01 10:47:32] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:47:32] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:47:32] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:32] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:47:32] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:32] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:32] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:47:32] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:32] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:32] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:32] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:32] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:32] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:32Z. Starting cleanup.
+[2026-07-01 10:47:32] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:32] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:47:32] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:47:32] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:32] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:32] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:32] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:38] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:47:38] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:47:38] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:38Z.
+[2026-07-01 10:47:38] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:47:38] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:47:38] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:38] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:47:38] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:38] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:38] [Task3] Duration limit loaded: 180s.
+[2026-07-01 10:47:38] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:38] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:38] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 180s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:38] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:38] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:38] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:38] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:38Z. Starting cleanup.
+[2026-07-01 10:47:38] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:38] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:47:38] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:47:38] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:38] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:38] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:44] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:47:44] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:47:44] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:44Z.
+[2026-07-01 10:47:44] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:47:44] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:47:44] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:44] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:47:44] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:44] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:44] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:47:44] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:44] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:44] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:44] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:44] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:44] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:44Z. Starting cleanup.
+[2026-07-01 10:47:44] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:44] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:47:44] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:47:44] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:44] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:44] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:44] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:50] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:47:50] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:47:50] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:50Z.
+[2026-07-01 10:47:50] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:47:50] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:47:50] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:50] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:47:50] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:50] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:50] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:47:50] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:50] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:50] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:50] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:50] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:50] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:50Z. Starting cleanup.
+[2026-07-01 10:47:50] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:50] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:47:50] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:47:50] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:50] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:50] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:50] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:56] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:47:56] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:47:56] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:47:56Z.
+[2026-07-01 10:47:56] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:47:56] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:47:56] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:47:56] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:47:56] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:47:56] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:47:56] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:47:56] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:47:56] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:56] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:56] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:47:56] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:47:56] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:47:56] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:47:56Z. Starting cleanup.
+[2026-07-01 10:47:56] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:47:56] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:47:56] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:47:56] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:47:56] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:47:56] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:02] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:02] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:02] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:02Z.
+[2026-07-01 10:48:02] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:02] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:02] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:02] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:02] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:02] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:02] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:02] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:02] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:02] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:02] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:02] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:02] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:02Z. Starting cleanup.
+[2026-07-01 10:48:02] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:02] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:02] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:02] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:02] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:02] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:02] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:09] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:09] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:09] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:09Z.
+[2026-07-01 10:48:09] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:09] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:09] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:09] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:09] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:09] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:09] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:09] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:09] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:09] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:09] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:09] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:09] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:09] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:09Z. Starting cleanup.
+[2026-07-01 10:48:09] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:09] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:09] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:09] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:09] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:09] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:15] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:15] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:15] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:15Z.
+[2026-07-01 10:48:15] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:15] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:15] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:15] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:15] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:15] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:15] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:15] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:15] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:15] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:15] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:15] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:15] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:15Z. Starting cleanup.
+[2026-07-01 10:48:15] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:15] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:15] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:15] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:15] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:15] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:15] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:21] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:21] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:21] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:21Z.
+[2026-07-01 10:48:21] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:21] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:21] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:21] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:21] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:21] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:21] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:21] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:21] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:21] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:21] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:21] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:21] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:21] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:21Z. Starting cleanup.
+[2026-07-01 10:48:21] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:21] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:21] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:21] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:21] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:21] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:27] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:27] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:27] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:27Z.
+[2026-07-01 10:48:27] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:27] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:27] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:27] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:27] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:27] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:27] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:27] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:27] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:27] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:27] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:27] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:27] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:27Z. Starting cleanup.
+[2026-07-01 10:48:27] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:27] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:27] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:27] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:27] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:27] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:27] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:33] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:33] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:33] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:33Z.
+[2026-07-01 10:48:33] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:33] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:33] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:33] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:33] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:33] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:33] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:33] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:33] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:33] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:33] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:33] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:33] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:33] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:33Z. Starting cleanup.
+[2026-07-01 10:48:33] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:33] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:33] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:33] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:33] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:33] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:39] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:39] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:39] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:39Z.
+[2026-07-01 10:48:39] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:39] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:39] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:39] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:39] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:39] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:39] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:39] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:39] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:39] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:39] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:39] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:39] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:39Z. Starting cleanup.
+[2026-07-01 10:48:39] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:39] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:39] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:39] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:39] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:39] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:39] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:45] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:45] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:45] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:45Z.
+[2026-07-01 10:48:45] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:45] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:45] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:45] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:45] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:45] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:45] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:45] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:45] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:45] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:45] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:45] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:45] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:45] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:45Z. Starting cleanup.
+[2026-07-01 10:48:45] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:45] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:45] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:45] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:45] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:45] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:51] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:51] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:52] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:51Z.
+[2026-07-01 10:48:52] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:52] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:52] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:52] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:52] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:52] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:52] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:52] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:52] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:52] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:52] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:52] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:52] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:52Z. Starting cleanup.
+[2026-07-01 10:48:52] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:52] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:52] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:52] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:52] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:52] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:52] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:48:58] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:48:58] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:48:58] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:48:58Z.
+[2026-07-01 10:48:58] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:48:58] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:48:58] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:48:58] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:48:58] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:48:58] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:58] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:48:58] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:58] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:58] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:48:58] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:48:58] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:48:58] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:48:58Z. Starting cleanup.
+[2026-07-01 10:48:58] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:48:58] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:48:58] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:48:58] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:48:58] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:48:58] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:48:58] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:49:04] [Task1] Found 3 file(s) total, 3 .mp3 file(s).
+[2026-07-01 10:49:04] [Task1] Published scan batch → 'playlist-scan-queue' (3 file(s)).
+[2026-07-01 10:49:04] [Task2] Received scan batch — 3 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 07:49:04Z.
+[2026-07-01 10:49:04] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 10:49:04] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 10:49:04] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 10:49:04] [Task2] Extraction complete — 3 record(s) ready.
+[2026-07-01 10:49:04] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 10:49:04] [Task3] Received metadata batch — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:49:04] [Task3] Duration limit loaded: 1s.
+[2026-07-01 10:49:04] [Task3] Track '07-Maladie-moderne.mp3' exceeds duration limit (237s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:49:04] [Task3] Track 'Ankino.mp3' exceeds duration limit (230s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:49:04] [Task3] Track 'IAO.MP3' exceeds duration limit (228s > 1s). Rejecting (file kept in scan folder).
+[2026-07-01 10:49:04] [Task3] All tracks in batch were blacklisted or invalid.
+[2026-07-01 10:49:04] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 10:49:04] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:49:04] [Task4] Upload success confirmed — 3 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 07:49:04Z. Starting cleanup.
+[2026-07-01 10:49:04] [Task4] 3 file(s) rejected (blacklist/duration) — will NOT be deleted.
+[2026-07-01 10:49:04] [Task4] Skipped (rejected): 07-Maladie-moderne.mp3
+[2026-07-01 10:49:04] [Task4] Skipped (rejected): Ankino.mp3
+[2026-07-01 10:49:04] [Task4] Skipped (rejected): IAO.MP3
+[2026-07-01 10:49:04] [Task4] 3 file(s) skipped (rejected by blacklist/duration).
+[2026-07-01 10:49:04] [Task4] Cleanup done — 0 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 10:49:07] [SYSTEM] Shutdown requested (Ctrl+C).
+[2026-07-01 10:49:07] [SYSTEM] Shutdown requested (Ctrl+C).

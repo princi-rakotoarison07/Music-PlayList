@@ -1,3 +1,4 @@
+@if (authService.currentUser$ | async; as user) {
 <header class="sticky top-0 z-50 bg-alabaster border-b border-peach-light shadow-sm">
   <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
     <!-- Brand -->
@@ -51,6 +52,26 @@
         </svg>
         Blacklist
       </a>
+
+      <!-- User Info & Logout -->
+      <div class="ml-4 pl-4 border-l border-peach-light flex items-center gap-3">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 flex items-center justify-center bg-sage text-white rounded-full text-xs font-bold uppercase">
+            {{ user.name.charAt(0) }}
+          </span>
+          <span class="text-sm font-medium text-text-primary hidden sm:inline">{{ user.name }}</span>
+        </div>
+        <button (click)="logout()"
+          class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium text-red-500 hover:bg-red-50 hover:text-red-600 transition-all duration-200 cursor-pointer">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Déconnexion
+        </button>
+      </div>
     </nav>
   </div>
 </header>
+}

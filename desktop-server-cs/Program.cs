@@ -1,4 +1,4 @@
-﻿using desktop_server_app.Config;
+using desktop_server_app.Config;
 using desktop_server_app.Components;
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
@@ -22,13 +22,15 @@ var task1 = new ReadDirectoryFilesProgram();   // scan dir  → playlist-scan-qu
 var task2 = new ExportDataProgram(); // scan-queue → extract tags → playlist-extract-queue
 var task3 = new CallApiProgram();         // extract-queue → POST API + upload files → playlist-upload-queue
 var task4 = new DeleteDataProgram();      // upload-queue → delete source .mp3 files
+var localApi = LocalApiServer.StartAsync(args, cts.Token); // Local REST API for frontend
 
-// All four run concurrently; none calls another directly — only RabbitMQ connects them.
+// All five run concurrently; none calls another directly — only RabbitMQ connects them.
 await Task.WhenAll(
     task1.RunAsync(cts.Token),
     task2.RunAsync(cts.Token),
     task3.RunAsync(cts.Token),
-    task4.RunAsync(cts.Token)
+    task4.RunAsync(cts.Token),
+    localApi
 );
 
 AppLogger.Close();

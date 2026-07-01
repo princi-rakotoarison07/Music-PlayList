@@ -13,7 +13,7 @@ export interface BlacklistRule {
 })
 export class BlacklistService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:5000/api/blacklist';
+  private apiUrl = 'http://localhost:5001/api/blacklist';
 
   getRules(): Observable<BlacklistRule[]> {
     return this.http.get<BlacklistRule[]>(this.apiUrl);

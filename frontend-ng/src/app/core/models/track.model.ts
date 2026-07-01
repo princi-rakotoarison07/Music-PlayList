@@ -41,6 +41,7 @@ export interface Playlist {
   id: number;
   name: string;
   targetDurationSeconds: number;
+  userId: number;
   createdAt: string;
   trackCount: number;
 }
@@ -63,5 +64,6 @@ export interface GeneratePlaylistCriteria {
 export interface SavePlaylistDto {
   name: string;
   targetDurationMinutes: number;
+  userId?: number;
   trackIds: number[];
 }
