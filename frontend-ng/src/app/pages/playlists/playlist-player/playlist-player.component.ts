@@ -31,12 +31,21 @@ import { Track } from '../../../core/models/track.model';
             <h1 class="text-[28px] font-bold text-text-primary tracking-tight mb-1">{{ playlistName() }}</h1>
             <p class="text-sm text-text-muted">{{ tracks().length }} chansons</p>
           </div>
-          <button (click)="toggleShuffle()" [class.bg-sage]="isShuffle()" [class.text-white]="isShuffle()" [class.bg-white]="!isShuffle()" [class.text-text-secondary]="!isShuffle()" class="px-4 py-2 border border-peach-light text-[13px] font-medium rounded-lg transition-colors cursor-pointer flex items-center gap-2 shadow-sm">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line>
-            </svg>
-            Mode Aléatoire
-          </button>
+          <div class="flex items-center gap-3">
+            <a [href]="'http://localhost:5000/api/playlists/' + playlistId() + '/download'" target="_blank"
+               class="px-4 py-2 border border-peach-light text-[13px] font-medium rounded-lg transition-colors cursor-pointer flex items-center gap-2 shadow-sm hover:bg-peach hover:text-white bg-white text-text-secondary">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Télécharger (ZIP)
+            </a>
+            <button (click)="toggleShuffle()" [class.bg-sage]="isShuffle()" [class.text-white]="isShuffle()" [class.bg-white]="!isShuffle()" [class.text-text-secondary]="!isShuffle()" class="px-4 py-2 border border-peach-light text-[13px] font-medium rounded-lg transition-colors cursor-pointer flex items-center gap-2 shadow-sm">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line>
+              </svg>
+              Mode Aléatoire
+            </button>
+          </div>
         </div>
 
         <!-- Active Player -->
@@ -129,6 +138,7 @@ export class PlaylistPlayerComponent implements OnInit {
   
   currentIndex = signal<number>(0);
   isShuffle = signal<boolean>(false);
+  playlistId = signal<number>(0);
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -138,6 +148,7 @@ export class PlaylistPlayerComponent implements OnInit {
     }
     
     if (id) {
+      this.playlistId.set(Number(id));
       this.playlistService.getPlaylist(Number(id)).subscribe({
         next: (data) => {
           this.playlistName.set(data.name);

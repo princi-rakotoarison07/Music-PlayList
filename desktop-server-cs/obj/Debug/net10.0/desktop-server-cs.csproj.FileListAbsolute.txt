@@ -4,16 +4,7 @@ D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\n
 D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\desktop-server-cs.runtimeconfig.json
 D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\desktop-server-cs.dll
 D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\desktop-server-cs.pdb
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.Configuration.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Json.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Physical.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.FileSystemGlobbing.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll
 D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\RabbitMQ.Client.dll
-D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\System.Threading.RateLimiting.dll
 D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\bin\Debug\net10.0\TagLibSharp.dll
 D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\obj\Debug\net10.0\desktop-server-cs.csproj.AssemblyReference.cache
 D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\desktop-server-cs\obj\Debug\net10.0\desktop-server-cs.GeneratedMSBuildEditorConfig.editorconfig

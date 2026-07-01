@@ -1,0 +1,477 @@
+[2026-07-01 09:47:17] [SYSTEM] Logger initialized. Log file: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\logs\playlist-log-2026-07-01_09-47-17.log
+[2026-07-01 09:47:17] [SYSTEM] Starting: desktop-server-app
+[2026-07-01 09:47:17] [SYSTEM] Pipeline: Task1 → [scan-queue] → Task2 → [extract-queue] → Task3 → [upload-queue] → Task4
+[2026-07-01 09:47:17] [SYSTEM] Local API Server started on http://localhost:5001
+[2026-07-01 09:47:18] [Task1] Started — watching: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3
+[2026-07-01 09:47:18] [Task1] Scan interval: 6 second(s)
+[2026-07-01 09:47:18] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:47:18] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:47:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:47:18] [Task2] Started — consuming 'playlist-scan-queue'.
+[2026-07-01 09:47:18] [Task3] Started — consuming 'playlist-extract-queue'.
+[2026-07-01 09:47:18] [Task4] Started — consuming 'playlist-upload-queue'.
+[2026-07-01 09:47:18] [Task4] Waiting for upload confirmations. Press Ctrl+C to stop.
+[2026-07-01 09:47:18] [Task3] Waiting for metadata batches. Press Ctrl+C to stop.
+[2026-07-01 09:47:18] [Task2] Waiting for scan batches. Press Ctrl+C to stop.
+[2026-07-01 09:47:24] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:47:24] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:47:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:47:30] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:47:30] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:47:30] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:47:36] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:47:36] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:47:36] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:47:42] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:47:42] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:47:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:47:48] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:47:48] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:47:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:47:54] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:47:54] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:47:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:00] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:00] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:06] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:06] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:12] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:12] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:18] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:18] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:24] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:24] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:30] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:30] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:30] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:36] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:36] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:36] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:42] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:42] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:48] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:48] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:48:54] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:48:54] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:48:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:00] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:00] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:06] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:06] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:12] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:12] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:18] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:18] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:24] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:24] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:30] [Task1] Found 8 file(s) total, 8 .mp3 file(s).
+[2026-07-01 09:49:30] [Task1] Published scan batch → 'playlist-scan-queue' (8 file(s)).
+[2026-07-01 09:49:30] [Task2] Received scan batch — 8 file(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' scanned at 2026-07-01 06:49:30Z.
+[2026-07-01 09:49:30] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:30] [Task2] Tags — '04-Regarde-moi.mp3': Title='04-Regarde-moi', Artists='Lomepal - Www.33rapmp3.com et 33rapfr.com', Album='Amina - 33rap-telechargement.com', Year=2019, Duration=00:02:56.9580000
+[2026-07-01 09:49:30] [Task2] Tags — '07-Interlude.mp3': Title='Interlude', Artists='Lefa', Album='Famous', Year=2020, Duration=00:02:07.3941000
+[2026-07-01 09:49:30] [Task2] Tags — '07-Maladie-moderne.mp3': Title='Maladie moderne', Artists='Lomepal', Album='Mauvais Ordre', Year=2022, Duration=00:03:57.2208750
+[2026-07-01 09:49:30] [Task2] Tags — '09-Mômes.mp3': Title='09-Mômes', Artists='Lomepal - Www.33rapmp3.com et 33rapfr.com', Album='Amina - 33rap-telechargement.com', Year=2019, Duration=00:02:56.8797000
+[2026-07-01 09:49:30] [Task2] Tags — '8 - Ne me ramène pas.mp3': Title='Ne me ramène pas', Artists='Lomepal', Album='Amina', Year=2019, Duration=00:02:16.5935625
+[2026-07-01 09:49:30] [Task2] Tags — 'Ankino.mp3': Title='Bodo', Artists='', Album='Album Bodo', Year=2000, Duration=00:03:50.4706875
+[2026-07-01 09:49:30] [Task2] Tags — 'Antanambao.MP3': Title='Antanambao', Artists='Bekoto Augustin', Album='Album Bekoto', Year=1980, Duration=00:02:54.5666249
+[2026-07-01 09:49:30] [Task2] Tags — 'IAO.MP3': Title='IAO', Artists='ROSSY', Album='IAO', Year=1990, Duration=00:03:48.5160000
+[2026-07-01 09:49:30] [Task2] Extraction complete — 8 record(s) ready.
+[2026-07-01 09:49:30] [Task2] Published metadata batch → 'playlist-extract-queue'.
+[2026-07-01 09:49:30] [Task3] Received metadata batch — 8 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 09:49:30] [Task3] Uploading '04-Regarde-moi.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 09:49:31] [Task3] Uploaded '04-Regarde-moi.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\04-Regarde-moi.mp3
+[2026-07-01 09:49:31] [Task3] Uploading '07-Interlude.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 09:49:31] [Task3] Uploaded '07-Interlude.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\07-Interlude.mp3
+[2026-07-01 09:49:31] [Task3] Uploading '07-Maladie-moderne.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 09:49:31] [Task3] Uploaded '07-Maladie-moderne.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\07-Maladie-moderne.mp3
+[2026-07-01 09:49:31] [Task3] Uploading '09-Mômes.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 09:49:31] [Task3] Uploaded '09-Mômes.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\09-Mômes.mp3
+[2026-07-01 09:49:31] [Task3] Uploading '8 - Ne me ramène pas.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 09:49:31] [Task3] Uploaded '8 - Ne me ramène pas.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\8 - Ne me ramène pas.mp3
+[2026-07-01 09:49:31] [Task3] Uploading 'Ankino.mp3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 09:49:31] [Task3] Uploaded 'Ankino.mp3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\Ankino.mp3
+[2026-07-01 09:49:31] [Task3] Uploading 'Antanambao.MP3' → http://localhost:5000/api/tracks/upload
+[2026-07-01 09:49:31] [Task3] Uploaded 'Antanambao.MP3' → server path: D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\backend-cs\upload_dir\Antanambao.MP3
+[2026-07-01 09:49:31] [Task3] Track 'IAO.MP3' is blacklisted. Rejecting.
+[2026-07-01 09:49:31] [Task3] POST metadata batch (7 track(s)) → http://localhost:5000/api/tracks/metadata
+[2026-07-01 09:49:32] [Task3] Metadata batch accepted.
+[2026-07-01 09:49:32] [Task3] Success message published → 'playlist-upload-queue'.
+[2026-07-01 09:49:32] [Task4] Upload success confirmed — 8 track(s) from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3' uploaded at 2026-07-01 06:49:32Z. Starting cleanup.
+[2026-07-01 09:49:32] [Task4] Deleted: 04-Regarde-moi.mp3
+[2026-07-01 09:49:32] [Task4] Deleted: 07-Interlude.mp3
+[2026-07-01 09:49:32] [Task4] Deleted: 07-Maladie-moderne.mp3
+[2026-07-01 09:49:32] [Task4] Deleted: 09-Mômes.mp3
+[2026-07-01 09:49:32] [Task4] Deleted: 8 - Ne me ramène pas.mp3
+[2026-07-01 09:49:32] [Task4] Deleted: Ankino.mp3
+[2026-07-01 09:49:32] [Task4] Deleted: Antanambao.MP3
+[2026-07-01 09:49:32] [Task4] Deleted: IAO.MP3
+[2026-07-01 09:49:32] [Task4] Cleanup done — 8 file(s) deleted from 'D:\mahasoa\ITU\S6\INF315-WebService\Music-PlayList\mp3'.
+[2026-07-01 09:49:36] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:36] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:36] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:42] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:42] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:48] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:48] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:49:54] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:49:54] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:49:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:00] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:00] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:06] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:06] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:12] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:12] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:18] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:18] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:24] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:24] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:30] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:30] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:30] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:36] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:36] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:36] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:42] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:42] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:48] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:48] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:50:54] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:50:54] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:50:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:00] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:00] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:06] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:06] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:12] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:12] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:18] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:18] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:24] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:24] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:30] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:30] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:30] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:36] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:36] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:36] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:42] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:42] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:48] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:48] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:51:54] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:51:54] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:51:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:00] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:00] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:06] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:06] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:12] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:12] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:18] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:18] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:24] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:24] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:30] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:30] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:30] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:36] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:36] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:36] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:42] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:42] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:48] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:48] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:52:54] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:52:54] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:52:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:00] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:00] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:06] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:06] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:12] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:12] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:18] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:18] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:18] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:24] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:24] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:24] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:30] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:30] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:30] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:36] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:36] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:36] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:42] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:42] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:42] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:48] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:48] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:48] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:53:54] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:53:54] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:53:54] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:00] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:00] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:00] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:06] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:06] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:06] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:12] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:12] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:12] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:25] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:25] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:25] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:31] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:31] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:37] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:37] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:43] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:43] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:49] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:49] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:54:55] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:54:55] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:54:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:01] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:01] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:07] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:07] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:13] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:13] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:13] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:25] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:25] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:25] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:31] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:31] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:37] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:37] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:43] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:43] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:49] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:49] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:55:55] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:55:55] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:55:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:01] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:01] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:07] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:07] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:13] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:13] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:13] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:25] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:25] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:25] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:31] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:31] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:37] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:37] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:43] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:43] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:49] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:49] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:56:55] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:56:55] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:56:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:01] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:01] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:07] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:07] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:13] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:13] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:13] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:25] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:25] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:25] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:31] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:31] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:37] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:37] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:43] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:43] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:49] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:49] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:57:55] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:57:55] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:57:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:01] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:01] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:07] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:07] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:13] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:13] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:13] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:25] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:25] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:25] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:31] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:31] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:37] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:37] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:43] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:43] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:49] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:49] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:58:55] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:58:55] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:58:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:01] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:01] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:07] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:07] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:13] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:13] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:13] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:25] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:25] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:25] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:31] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:31] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:37] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:37] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:43] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:43] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:49] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:49] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 09:59:55] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 09:59:55] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 09:59:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:01] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:01] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:07] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:07] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:13] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:13] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:13] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:25] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:25] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:25] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:31] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:31] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:31] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:37] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:37] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:37] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:43] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:43] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:43] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:49] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:49] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:49] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:00:55] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:00:55] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:00:55] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:01:01] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:01:01] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:01:01] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:01:07] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:01:07] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:01:07] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:01:13] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:01:13] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:01:13] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:01:19] [Task1] Found 0 file(s) total, 0 .mp3 file(s).
+[2026-07-01 10:01:19] [Task1] No .mp3 files — nothing to publish.
+[2026-07-01 10:01:19] [Task1] Next scan in 6 second(s)…
+[2026-07-01 10:01:24] [SYSTEM] Shutdown requested (Ctrl+C).
+[2026-07-01 10:01:25] [SYSTEM] Shutdown requested (Ctrl+C).

@@ -10,6 +10,7 @@ namespace backend_cs.Data
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Mp3MetaData> Mp3MetaDatas { get; set; }
         public DbSet<Playlist> Playlists { get; set; }
         public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
@@ -51,6 +52,10 @@ namespace backend_cs.Data
                 
             modelBuilder.Entity<Mp3MetaData>()
                 .HasIndex(m => m.FilePath)
+                .IsUnique();
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
                 .IsUnique();
         }
     }
