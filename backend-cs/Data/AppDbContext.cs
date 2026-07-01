@@ -13,6 +13,7 @@ namespace backend_cs.Data
         public DbSet<Mp3MetaData> Mp3MetaDatas { get; set; }
         public DbSet<Playlist> Playlists { get; set; }
         public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
+        public DbSet<BlacklistRule> BlacklistRules { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,6 +52,10 @@ namespace backend_cs.Data
                 
             modelBuilder.Entity<Mp3MetaData>()
                 .HasIndex(m => m.FilePath)
+                .IsUnique();
+
+            modelBuilder.Entity<BlacklistRule>()
+                .HasIndex(br => new { br.RuleType, br.Value })
                 .IsUnique();
         }
     }

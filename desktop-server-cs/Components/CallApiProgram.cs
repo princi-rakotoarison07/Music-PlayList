@@ -21,6 +21,7 @@ namespace desktop_server_app.Components
     {
         private readonly string _metadataEndpoint;
         private readonly string _uploadEndpoint;
+        private readonly string _blacklistEndpoint;
         private readonly HttpClient _http;
 
         private static readonly JsonSerializerOptions _jsonOpts = new() { WriteIndented = true };
@@ -33,6 +34,10 @@ namespace desktop_server_app.Components
                 ?? throw new InvalidOperationException("Missing 'Api:MetadataEndpoint'.");
             _uploadEndpoint = api["UploadEndpoint"]
                 ?? throw new InvalidOperationException("Missing 'Api:UploadEndpoint'.");
+
+            // We construct the blacklist endpoint assuming standard REST structure
+            var baseUri = new Uri(_metadataEndpoint);
+            _blacklistEndpoint = $"{baseUri.Scheme}://{baseUri.Host}:{baseUri.Port}/api/blacklist";
 
             _http = new HttpClient
             {
@@ -90,9 +95,31 @@ namespace desktop_server_app.Components
                     var serverPaths = new Dictionary<string, string>(); // key = original FilePath
                     bool uploadFailed = false;
 
+                    // Fetch current blacklist
+                    var blacklist = await FetchBlacklistAsync(cancellationToken);
+                    var validTracks = new List<Mp3Metadata>();
+
                     foreach (var track in batch.Tracks)
                     {
                         cancellationToken.ThrowIfCancellationRequested();
+
+                        // Check blacklist
+                        bool isBlacklisted = false;
+                        foreach (var rule in blacklist)
+                        {
+                            if (rule.RuleType == "Artist" && track.Artists.Any(a => a.Equals(rule.Value, StringComparison.OrdinalIgnoreCase)))
+                                isBlacklisted = true;
+                            if (rule.RuleType == "Genre" && track.Genres.Any(g => g.Equals(rule.Value, StringComparison.OrdinalIgnoreCase)))
+                                isBlacklisted = true;
+                            if (rule.RuleType == "Title" && track.Title.Equals(rule.Value, StringComparison.OrdinalIgnoreCase))
+                                isBlacklisted = true;
+                        }
+
+                        if (isBlacklisted)
+                        {
+                            AppLogger.Log("Task3", $"Track '{track.FileName}' is blacklisted. Rejecting.");
+                            continue; // Skip uploading and saving this track
+                        }
 
                         if (!File.Exists(track.FilePath))
                         {
@@ -109,6 +136,7 @@ namespace desktop_server_app.Components
                         }
 
                         serverPaths[track.FilePath] = serverPath;
+                        validTracks.Add(track);
                         AppLogger.Log("Task3", $"Uploaded '{track.FileName}' → server path: {serverPath}");
                     }
 
@@ -120,10 +148,16 @@ namespace desktop_server_app.Components
                     }
 
                     // ── Step B : Build metadata batch with server file paths ──
-                    var metadataBatch = new MetadataBatchRequest
+                    if (validTracks.Count == 0)
                     {
-                        SourceDir = batch.SourceDir,
-                        Tracks = batch.Tracks.Select(track => new MetadataUploadDto
+                        AppLogger.Log("Task3", "All tracks in batch were blacklisted or invalid.");
+                    }
+                    else
+                    {
+                        var metadataBatch = new MetadataBatchRequest
+                        {
+                            SourceDir = batch.SourceDir,
+                            Tracks = validTracks.Select(track => new MetadataUploadDto
                         {
                             FileName = track.FileName,
                             FilePath = serverPaths[track.FilePath],   // server-side path
@@ -146,13 +180,14 @@ namespace desktop_server_app.Components
                         }).ToList()
                     };
 
-                    // ── Step C : POST metadata batch to API ──
-                    bool metaOk = await PostMetadataBatchAsync(metadataBatch, cancellationToken);
-                    if (!metaOk)
-                    {
-                        AppLogger.Log("Task3", "Metadata batch POST failed — requeueing for retry.");
-                        await channel.BasicNackAsync(ea.DeliveryTag, false, true, cancellationToken);
-                        return;
+                        // ── Step C : POST metadata batch to API ──
+                        bool metaOk = await PostMetadataBatchAsync(metadataBatch, cancellationToken);
+                        if (!metaOk)
+                        {
+                            AppLogger.Log("Task3", "Metadata batch POST failed — requeueing for retry.");
+                            await channel.BasicNackAsync(ea.DeliveryTag, false, true, cancellationToken);
+                            return;
+                        }
                     }
 
                     // ── Step D : Notify Task 4 (cleanup) ──
@@ -275,6 +310,28 @@ namespace desktop_server_app.Components
             }
         }
 
-       
+        private async Task<List<BlacklistRuleDto>> FetchBlacklistAsync(CancellationToken ct)
+        {
+            try
+            {
+                var response = await _http.GetAsync(_blacklistEndpoint, ct);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync(ct);
+                    return JsonSerializer.Deserialize<List<BlacklistRuleDto>>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+                }
+            }
+            catch (Exception ex)
+            {
+                AppLogger.Log("Task3", $"Failed to fetch blacklist: {ex.Message}");
+            }
+            return new List<BlacklistRuleDto>();
+        }
+
+        public class BlacklistRuleDto
+        {
+            public string RuleType { get; set; } = string.Empty;
+            public string Value { get; set; } = string.Empty;
+        }
     }
 }

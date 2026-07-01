@@ -27,6 +27,11 @@ export const routes: Routes = [
     title: 'Lecture de Playlist — Music Playlist'
   },
   {
+    path: 'blacklist',
+    loadComponent: () => import('./pages/blacklist/blacklist.component').then(m => m.BlacklistComponent),
+    title: 'Blacklist — Music Playlist'
+  },
+  {
     path: '**',
     redirectTo: ''
   }

@@ -77,6 +77,15 @@ CREATE TABLE IF NOT EXISTS "PlaylistTracks" (
     UNIQUE ("PlaylistId", "Mp3Id")
 );
 
+-- ── BlacklistRules ───────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS "BlacklistRules" (
+    "Id" SERIAL PRIMARY KEY,
+    "RuleType" VARCHAR(50) NOT NULL, -- e.g., 'Artist', 'Genre', 'Title'
+    "Value" VARCHAR(255) NOT NULL,
+    "CreatedAt" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    UNIQUE ("RuleType", "Value")
+);
+
 -- ── Indexes ──────────────────────────────────────────────────
 CREATE INDEX IF NOT EXISTS "idx_mp3_album"    ON "Mp3MetaData"("AlbumId");
 CREATE INDEX IF NOT EXISTS "idx_mp3_title"    ON "Mp3MetaData"("Title");
